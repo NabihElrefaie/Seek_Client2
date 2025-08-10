@@ -16,6 +16,55 @@
         <member name="M:Seek.API.Controllers.System.VerificationController.ResetVerification">
             Resets the verification status (requires authentication in production)
         </member>
+        <member name="T:Seek.API.Security.Config.EmailConfiguration">
+            <summary>
+            Manages secure email configuration by reading from external encrypted files
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.Config.EmailConfiguration.ConfigureFromSecureFiles(Seek.Core.Dtos.Settings.Emails.EmailSettings_dto,Microsoft.Extensions.Logging.ILogger,System.String,System.String)">
+            <summary>
+            Tries to configure email settings from secure files
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.Config.EmailConfiguration.DecryptConfig(System.Byte[],System.Byte[],Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Decrypts the configuration using the provided key
+            </summary>
+        </member>
+        <member name="T:Seek.API.Security.Config.EmailEncryptor">
+            <summary>
+            Utility to create encrypted email configuration files
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.Config.EmailEncryptor.CreateEncryptedEmailConfig(System.String,System.Int32,System.String,System.String,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates encrypted email configuration files
+            </summary>
+            <param name="smtpServer">SMTP server address</param>
+            <param name="smtpPort">SMTP port</param>
+            <param name="username">Email username</param>
+            <param name="password">Email password</param>
+            <param name="useSsl">Whether to use SSL</param>
+            <param name="fromEmail">From email address</param>
+            <param name="adminEmail">Admin email address</param>
+            <param name="outputPath">Path to save the encrypted config file</param>
+            <param name="keyPath">Path to save the encryption key file</param>
+        </member>
+        <member name="T:Seek.API.Security.Config.SecureEmailManager">
+            <summary>
+            Manages secure email configuration by reading from external encrypted files
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.Config.SecureEmailManager.GetEmailConfig">
+            <summary>
+            Reads and decrypts the email configuration file using the key file
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.Config.SecureEmailManager.DecryptConfig(System.Byte[],System.Byte[])">
+            <summary>
+            Decrypts the configuration using the provided key
+            </summary>
+        </member>
         <member name="T:Seek.API.Security.New.DatabaseEncryptionExtensions">
             <summary>
             Extensions for integrating database encryption with the application startup
@@ -84,6 +133,11 @@
         </member>
         <member name="T:Seek.API.Services.Interceptors.SqliteEncryptionInterceptor">
             Interceptor that applies encryption settings to SQLite connections
+        </member>
+        <member name="T:Seek.API.Tools.CreateEmailConfig">
+            <summary>
+            Command line tool to create encrypted email configuration files
+            </summary>
         </member>
     </members>
 </doc>

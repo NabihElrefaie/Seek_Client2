@@ -19,7 +19,7 @@ namespace Seek.API.Controllers.System
         private readonly SecureSettingsManager _secureSettingsManager;
         #endregion
 
-        public VerificationController( ILogger<VerificationController> logger, IRepo_VerificationManager verificationService,IRepo_Email_Templates emailService,SecureSettingsManager secureSettingsManager)
+        public VerificationController(ILogger<VerificationController> logger, IRepo_VerificationManager verificationService, IRepo_Email_Templates emailService, SecureSettingsManager secureSettingsManager)
         {
             _logger = logger;
             _verification = verificationService;

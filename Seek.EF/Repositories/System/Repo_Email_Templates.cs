@@ -90,7 +90,7 @@ namespace Seek.EF.Repositories.System
             try
             {
                 string subject = "Security Alert: New Device Registration";
-                string body = Email_Template.NewDeviceRegistrationEmailBody(deviceId,ipAddress,encryptionKey,!string.IsNullOrEmpty(password));
+                string body = Email_Template.NewDeviceRegistrationEmailBody(deviceId, ipAddress, encryptionKey, !string.IsNullOrEmpty(password));
 
                 await SendEmailAsync(_settings.AdminEmail, subject, body);
                 _logger?.LogInformation("New device registration notification email sent successfully.");

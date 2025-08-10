@@ -53,7 +53,7 @@ namespace Seek.API.Security.New
         public static IApplicationBuilder UseVerificationCheck(this IApplicationBuilder app)
         {
 
-            
+
 
             return app.Use(async (context, next) =>
             {

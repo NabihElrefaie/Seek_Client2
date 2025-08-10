@@ -35,7 +35,8 @@ namespace Seek.API
             // 2. Configure database services with encryption
             ConfigureDatabaseServices(services);
 
-            services.Configure<EmailSettings_dto>(_configuration.GetSection("EmailSettings"));
+            // Configure email settings from encrypted config files
+            services.ConfigureEmailSettings();
 
             // Register repositories and other services
             services.AddRepositoryServices();
@@ -140,7 +141,7 @@ namespace Seek.API
 
             // Register DbContext with encryption
             services.AddDbContext<ApplicationDbContext>(
-                options =>ConfigureDbContextOptions(options, connectionString, services)
+                options => ConfigureDbContextOptions(options, connectionString, services)
                 );
         }
         private string GetEncryptionKey()
@@ -154,7 +155,25 @@ namespace Seek.API
                     // Create a temporary service provider if needed
                     using (var scope = new ServiceCollection()
                         .AddLogging()
-                        .Configure<EmailSettings_dto>(_configuration.GetSection("EmailSettings"))
+                        .Configure<EmailSettings_dto>(options =>
+                        {
+                            // Create logger to use in configuration
+                            using var loggerFactory = LoggerFactory.Create(builder =>
+                            {
+                                builder.AddConsole();
+                                builder.AddDebug();
+                            });
+                            var logger = loggerFactory.CreateLogger("EmailConfig");
+
+                            string configPath = Path.Combine(Directory.GetCurrentDirectory(), "email.cfg");
+                            string keyPath = Path.Combine(Directory.GetCurrentDirectory(), "email.key");
+
+                            // Load from secure files
+                            if (!Security.Config.EmailConfiguration.ConfigureFromSecureFiles(options, logger, configPath, keyPath))
+                            {
+                                logger.LogError("Failed to load email settings from encrypted files. Email functionality may not work.");
+                            }
+                        })
                         .AddSingleton<IRepo_Email_Templates>()
                         .AddSingleton<SecureKeyManager>(provider =>
                             new SecureKeyManager(

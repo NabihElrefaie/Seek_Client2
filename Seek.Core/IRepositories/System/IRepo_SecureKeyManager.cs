@@ -10,6 +10,5 @@ namespace Seek.Core.IRepositories.System
     {
         Task<string> GetEncryptionKeyAsync(string password = null);
         Task<bool> VerifyKeyAsync(string password);
-
     }
 }

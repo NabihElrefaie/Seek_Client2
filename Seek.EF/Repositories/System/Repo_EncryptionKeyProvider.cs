@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Seek.EF.Repositories.System
 {
-    public  class Repo_EncryptionKeyProvider : IRepo_EncryptionKeyProvider
+    public class Repo_EncryptionKeyProvider : IRepo_EncryptionKeyProvider
     {
         private readonly SecureKeyManager _keyManager;
         private readonly string _fallbackKey;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nabih\\github\\Seek_Client\\Seek.Core\\Seek.Core.csproj": {}
+    "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.Core\\Seek.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nabih\\github\\Seek_Client\\Seek.Core\\Seek.Core.csproj": {
+    "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.Core\\Seek.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nabih\\github\\Seek_Client\\Seek.Core\\Seek.Core.csproj",
+        "projectUniqueName": "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.Core\\Seek.Core.csproj",
         "projectName": "Seek.Core",
-        "projectPath": "C:\\Users\\nabih\\github\\Seek_Client\\Seek.Core\\Seek.Core.csproj",
+        "projectPath": "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.Core\\Seek.Core.csproj",
         "packagesPath": "C:\\Users\\nabih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nabih\\github\\Seek_Client\\Seek.Core\\obj\\",
+        "outputPath": "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -19,9 +19,8 @@ namespace Seek.API.Services.System
             // Register security and encryption services
             services.AddDatabaseEncryptionServices();
 
-            // Singleton services
-            services.AddSingleton<IRepo_SecureKeyManager, Repo_SecureKeyManager>();
-            services.AddSingleton<IRepo_VerificationManager, Repo_VerificationManager>();
+            // Singleton services - Note: SecureKeyManager & VerificationManager are registered in StartUp.cs
+            // to ensure proper initialization with correct dependencies
 
             // Scoped repositories
             services.AddScoped<IRepo_Database_Security, Repo_Database_Security>();

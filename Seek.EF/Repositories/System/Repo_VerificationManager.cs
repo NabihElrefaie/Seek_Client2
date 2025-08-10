@@ -7,7 +7,7 @@ using System.Text.Json;
 
 namespace Seek.EF.Repositories.System
 {
-    public  class Repo_VerificationManager : IRepo_VerificationManager
+    public class Repo_VerificationManager : IRepo_VerificationManager
     {
         #region -> Fields
         private readonly ILogger<Repo_VerificationManager> _logger;
@@ -23,7 +23,7 @@ namespace Seek.EF.Repositories.System
             _verificationFilePath = Path.Combine(_workingDirectory, "verification_status.json");
             _logger = logger;
             EnsureVerificationStatusFile();
-            _logger.LogInformation(message : "System : Verification Manager initialized");
+            _logger.LogInformation(message: "System : Verification Manager initialized");
         }
 
         #region-> Interface Implementation

@@ -8,7 +8,7 @@ namespace Seek.API.Security.New
     /// </summary>
     public static class StartupExtensions
     {
-       
+
 
         /// Configures security middleware for the application
         public static IApplicationBuilder UseSeekSecurity(this IApplicationBuilder app)

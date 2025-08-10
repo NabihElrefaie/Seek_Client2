@@ -15671,11 +15671,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nabih\\github\\Seek_Client\\Seek.API\\Seek.API.csproj",
+      "projectUniqueName": "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.API\\Seek.API.csproj",
       "projectName": "Seek.API",
-      "projectPath": "C:\\Users\\nabih\\github\\Seek_Client\\Seek.API\\Seek.API.csproj",
+      "projectPath": "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.API\\Seek.API.csproj",
       "packagesPath": "C:\\Users\\nabih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nabih\\github\\Seek_Client\\Seek.API\\obj\\",
+      "outputPath": "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -15697,11 +15697,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\nabih\\github\\Seek_Client\\Seek.Core\\Seek.Core.csproj": {
-              "projectPath": "C:\\Users\\nabih\\github\\Seek_Client\\Seek.Core\\Seek.Core.csproj"
+            "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.Core\\Seek.Core.csproj": {
+              "projectPath": "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.Core\\Seek.Core.csproj"
             },
-            "C:\\Users\\nabih\\github\\Seek_Client\\Seek.EF\\Seek.EF.csproj": {
-              "projectPath": "C:\\Users\\nabih\\github\\Seek_Client\\Seek.EF\\Seek.EF.csproj"
+            "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.EF\\Seek.EF.csproj": {
+              "projectPath": "C:\\Users\\nabih\\github\\Seek_Client2\\Seek_Client2\\Seek.EF\\Seek.EF.csproj"
             }
           }
         }

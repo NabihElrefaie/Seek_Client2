@@ -161,3 +161,23 @@ System.InvalidOperationException: SQLite encryption key is not configured. Set t
    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
    at Seek.Program.Main(String[] args) in C:\Users\nabih\github\Seek_Client\Seek.API\Program.cs:line 27
+2025-08-10 14:46:47.657 +03:00 [INF] System : Starting web host
+2025-08-10 14:46:49.470 +03:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.Database.IRepo_Database_Security Lifetime: Scoped ImplementationType: Seek.EF.Repositories.Database.Repo_Database_Security': Unable to resolve service for type 'Seek.Core.IRepositories.System.IRepo_SecureKeyManager' while attempting to activate 'Seek.EF.Repositories.Database.Repo_Database_Security'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.Database.IRepo_Database_Security Lifetime: Scoped ImplementationType: Seek.EF.Repositories.Database.Repo_Database_Security': Unable to resolve service for type 'Seek.Core.IRepositories.System.IRepo_SecureKeyManager' while attempting to activate 'Seek.EF.Repositories.Database.Repo_Database_Security'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Seek.Core.IRepositories.System.IRepo_SecureKeyManager' while attempting to activate 'Seek.EF.Repositories.Database.Repo_Database_Security'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.InitializeServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Seek.Program.Main(String[] args) in C:\Users\nabih\github\Seek_Client2\Seek_Client2\Seek.API\Program.cs:line 27
