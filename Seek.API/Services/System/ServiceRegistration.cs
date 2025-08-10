@@ -26,6 +26,7 @@ namespace Seek.API.Services.System
             services.AddScoped<IRepo_Database_Security, Repo_Database_Security>();
             services.AddScoped<IRepo_Database_Existence_Checker, Repo_Database_Existence_Checker>();
             services.AddScoped<IRepo_Email_Templates, Repo_Email_Templates>();
+            services.AddScoped<IRepo_SecureKeyManager, Repo_SecureKeyManager>();
 
         }
     }
