@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Seek.API</name>
+    </assembly>
+    <members>
+        <member name="M:Seek.API.Controllers.System.VerificationController.GetVerificationStatus">
+            Checks if the application is verified
+        </member>
+        <member name="M:Seek.API.Controllers.System.VerificationController.SendVerificationCode">
+            Sends a verification code to the admin email
+        </member>
+        <member name="M:Seek.API.Controllers.System.VerificationController.VerifyApplication(Seek.Core.Dtos.Settings.Emails.VerificationRequest_dto)">
+            Verifies the application using the provided code
+        </member>
+        <member name="M:Seek.API.Controllers.System.VerificationController.ResetVerification">
+            Resets the verification status (requires authentication in production)
+        </member>
+        <member name="T:Seek.API.Security.New.DatabaseEncryptionExtensions">
+            <summary>
+            Extensions for integrating database encryption with the application startup
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.New.DatabaseEncryptionExtensions.AddDatabaseEncryptionServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers database encryption services
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.New.DatabaseEncryptionExtensions.UseVerificationCheck(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configures application startup to check for verification before allowing database access
+            </summary>
+        </member>
+        <member name="T:Seek.API.Security.New.SecureSettingsManager">
+            <summary>
+            Manages secure storage and retrieval of sensitive application settings
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.New.SecureSettingsManager.GetSecureEmailSettings">
+            <summary>
+            Gets secure email settings, either from encrypted storage or falls back to configuration
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.New.SecureSettingsManager.SaveSecureEmailSettings(Seek.Core.Dtos.Settings.Emails.EmailSettings_dto)">
+            <summary>
+            Saves email settings to secure encrypted storage
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.New.SecureSettingsManager.LoadSecureSettings">
+            <summary>
+            Loads secure settings from encrypted storage
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.New.SecureSettingsManager.SaveSecureSettings(Seek.API.Security.New.SecureApplicationSettings)">
+            <summary>
+            Saves secure settings to encrypted storage
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.New.SecureSettingsManager.EncryptData(System.String,System.String)">
+            <summary>
+            Encrypts data using AES with the provided key
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.New.SecureSettingsManager.DecryptData(System.Byte[],System.String)">
+            <summary>
+            Decrypts data using AES with the provided key
+            </summary>
+        </member>
+        <member name="T:Seek.API.Security.New.SecureApplicationSettings">
+            <summary>
+            Class to hold all secure application settings
+            </summary>
+        </member>
+        <member name="T:Seek.API.Security.New.StartupExtensions">
+            <summary>
+            Extensions for configuring security services in application startup
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.New.StartupExtensions.UseSeekSecurity(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            Configures security middleware for the application
+        </member>
+        <member name="M:Seek.API.Security.New.StartupExtensions.InitializeSecureSettings(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            Initializes secure settings by transferring from appsettings to encrypted storage
+        </member>
+        <member name="T:Seek.API.Services.Interceptors.SqliteEncryptionInterceptor">
+            Interceptor that applies encryption settings to SQLite connections
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,19 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Seek 1.0",
+    "description": "A Middleware for ZATCA E-Invoicing Integration",
+    "contact": {
+      "name": "Nabih",
+      "url": "https://fb.com/nabihabdelkhalek",
+      "email": "Nabihabdelkhalek6@gmail.com"
+    },
+    "license": {
+      "name": "IIS",
+      "url": "https://mystation.sa"
+    },
+    "version": "1.0"
+  },
+  "paths": { },
+  "components": { }
+}

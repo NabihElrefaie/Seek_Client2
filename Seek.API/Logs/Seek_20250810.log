@@ -1,0 +1,163 @@
+2025-08-10 13:11:51.010 +03:00 [INF] System : Starting web host
+2025-08-10 13:11:52.914 +03:00 [INF] SQLite : Database directory created at C:\Users\nabih\github\Seek_Client\Seek.API\Database
+2025-08-10 13:11:53.145 +03:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Seek.Core.Security.SecureKeyManager Lifetime: Singleton ImplementationType: Seek.Core.Security.SecureKeyManager': Unable to resolve service for type 'System.String' while attempting to activate 'Seek.Core.Security.SecureKeyManager'.) (Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.System.IRepo_Email_Templates Lifetime: Scoped ImplementationType: Seek.EF.Repositories.System.Repo_Email_Templates': Unable to resolve service for type 'Seek.EF.Email_templates.Email_Template' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Seek.Core.Security.SecureKeyManager Lifetime: Singleton ImplementationType: Seek.Core.Security.SecureKeyManager': Unable to resolve service for type 'System.String' while attempting to activate 'Seek.Core.Security.SecureKeyManager'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'System.String' while attempting to activate 'Seek.Core.Security.SecureKeyManager'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.InitializeServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Seek.Program.Main(String[] args) in C:\Users\nabih\github\Seek_Client\Seek.API\Program.cs:line 27
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.System.IRepo_Email_Templates Lifetime: Scoped ImplementationType: Seek.EF.Repositories.System.Repo_Email_Templates': Unable to resolve service for type 'Seek.EF.Email_templates.Email_Template' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Seek.EF.Email_templates.Email_Template' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2025-08-10 13:14:25.475 +03:00 [INF] System : Starting web host
+2025-08-10 13:16:33.249 +03:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Seek.Core.Security.SecureKeyManager Lifetime: Singleton ImplementationType: Seek.Core.Security.SecureKeyManager': Unable to resolve service for type 'System.String' while attempting to activate 'Seek.Core.Security.SecureKeyManager'.) (Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.System.IRepo_Email_Templates Lifetime: Scoped ImplementationType: Seek.EF.Repositories.System.Repo_Email_Templates': Unable to resolve service for type 'Seek.EF.Email_templates.Email_Template' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Seek.Core.Security.SecureKeyManager Lifetime: Singleton ImplementationType: Seek.Core.Security.SecureKeyManager': Unable to resolve service for type 'System.String' while attempting to activate 'Seek.Core.Security.SecureKeyManager'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'System.String' while attempting to activate 'Seek.Core.Security.SecureKeyManager'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.InitializeServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Seek.Program.Main(String[] args) in C:\Users\nabih\github\Seek_Client\Seek.API\Program.cs:line 27
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.System.IRepo_Email_Templates Lifetime: Scoped ImplementationType: Seek.EF.Repositories.System.Repo_Email_Templates': Unable to resolve service for type 'Seek.EF.Email_templates.Email_Template' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Seek.EF.Email_templates.Email_Template' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2025-08-10 13:20:28.806 +03:00 [INF] System : Starting web host
+2025-08-10 13:20:37.036 +03:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.System.IRepo_Email_Templates Lifetime: Scoped ImplementationType: Seek.EF.Repositories.System.Repo_Email_Templates': Unable to resolve service for type 'Seek.EF.Email_templates.Email_Template' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.System.IRepo_Email_Templates Lifetime: Scoped ImplementationType: Seek.EF.Repositories.System.Repo_Email_Templates': Unable to resolve service for type 'Seek.EF.Email_templates.Email_Template' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Seek.EF.Email_templates.Email_Template' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.InitializeServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Seek.Program.Main(String[] args) in C:\Users\nabih\github\Seek_Client\Seek.API\Program.cs:line 27
+2025-08-10 13:25:56.203 +03:00 [INF] System : Starting web host
+2025-08-10 13:26:13.163 +03:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.System.IRepo_Email_Templates Lifetime: Scoped ImplementationType: Seek.EF.Repositories.System.Repo_Email_Templates': Unable to resolve service for type 'Seek.Core.Dtos.Settings.Emails.EmailSettings_dto' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Seek.Core.IRepositories.System.IRepo_Email_Templates Lifetime: Scoped ImplementationType: Seek.EF.Repositories.System.Repo_Email_Templates': Unable to resolve service for type 'Seek.Core.Dtos.Settings.Emails.EmailSettings_dto' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Seek.Core.Dtos.Settings.Emails.EmailSettings_dto' while attempting to activate 'Seek.EF.Repositories.System.Repo_Email_Templates'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.InitializeServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Seek.Program.Main(String[] args) in C:\Users\nabih\github\Seek_Client\Seek.API\Program.cs:line 27
+2025-08-10 13:31:45.337 +03:00 [INF] System : Starting web host
+2025-08-10 13:31:57.931 +03:00 [ERR] SQLite encryption key is not configured and secure key manager failed
+System.ArgumentException: Cannot instantiate implementation type 'Seek.Core.IRepositories.System.IRepo_Email_Templates' for service type 'Seek.Core.IRepositories.System.IRepo_Email_Templates'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(ICollection`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Seek.API.StartUp.GetEncryptionKey() in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 155
+2025-08-10 13:31:57.993 +03:00 [FTL] Application startup exception
+System.InvalidOperationException: SQLite encryption key is not configured. Set the 'EncryptionKey' in configuration.
+   at Seek.API.StartUp.GetEncryptionKey() in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 176
+   at Seek.API.StartUp.InitializeDatabase(IApplicationBuilder app) in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 230
+   at Seek.API.StartUp.Configure(IApplicationBuilder app, IApiVersionDescriptionProvider provider) in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 70
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.Extensions.DependencyInjection.AutoRegisterMiddleware.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.BrowserLink.Net.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.ApiEndpointDiscovery.HostingStartup.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-08-10 13:31:58.034 +03:00 [ERR] Hosting failed to start
+System.InvalidOperationException: SQLite encryption key is not configured. Set the 'EncryptionKey' in configuration.
+   at Seek.API.StartUp.GetEncryptionKey() in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 176
+   at Seek.API.StartUp.InitializeDatabase(IApplicationBuilder app) in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 230
+   at Seek.API.StartUp.Configure(IApplicationBuilder app, IApiVersionDescriptionProvider provider) in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 70
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.Extensions.DependencyInjection.AutoRegisterMiddleware.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.BrowserLink.Net.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.ApiEndpointDiscovery.HostingStartup.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-08-10 13:31:58.095 +03:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: SQLite encryption key is not configured. Set the 'EncryptionKey' in configuration.
+   at Seek.API.StartUp.GetEncryptionKey() in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 176
+   at Seek.API.StartUp.InitializeDatabase(IApplicationBuilder app) in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 230
+   at Seek.API.StartUp.Configure(IApplicationBuilder app, IApiVersionDescriptionProvider provider) in C:\Users\nabih\github\Seek_Client\Seek.API\StartUp.cs:line 70
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.Extensions.DependencyInjection.AutoRegisterMiddleware.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.BrowserLink.Net.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.ApiEndpointDiscovery.HostingStartup.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Seek.Program.Main(String[] args) in C:\Users\nabih\github\Seek_Client\Seek.API\Program.cs:line 27

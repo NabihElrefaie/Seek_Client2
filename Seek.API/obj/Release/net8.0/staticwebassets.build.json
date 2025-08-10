@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "1cFiSUdd1Y3jeW4bP12l4gJsjMB/EiEsE0WdCD/XFO4=",
+  "Source": "Seek.API",
+  "BasePath": "_content/Seek.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
