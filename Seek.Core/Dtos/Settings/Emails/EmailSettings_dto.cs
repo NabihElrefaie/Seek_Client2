@@ -11,12 +11,12 @@ namespace Seek.Core.Dtos.Settings.Emails
     /// </summary>
     public class EmailSettings_dto
     {
-        public required string SmtpServer { get; set; }
+        public  string SmtpServer { get; set; }
         public int SmtpPort { get; set; }
-        public required string Username { get; set; }
-        public required string Password { get; set; }
+        public  string Username { get; set; }
+        public  string Password { get; set; }
         public bool UseSsl { get; set; }
-        public required string FromEmail { get; set; }
-        public required string AdminEmail { get; set; }
+        public  string FromEmail { get; set; }
+        public  string AdminEmail { get; set; }
     }
 }

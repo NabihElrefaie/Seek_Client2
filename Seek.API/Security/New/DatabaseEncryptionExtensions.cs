@@ -44,6 +44,10 @@ namespace Seek.API.Security.New
                 )
             );
 
+            // Register SqliteEncryptionInterceptor and dependencies
+            services.AddScoped<IRepo_EncryptionKeyProvider, Repo_EncryptionKeyProvider>();
+            services.AddScoped<Services.Interceptors.SqliteEncryptionInterceptor>();
+
             return services;
         }
 

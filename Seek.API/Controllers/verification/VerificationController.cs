@@ -6,7 +6,7 @@ using Seek.Core.Dtos.Settings.Emails;
 using Seek.Core.IRepositories.System;
 using Seek.Core.Security;
 
-namespace Seek.API.Controllers.System
+namespace Seek.API.Controllers.verification
 {
     [ApiController]
     [Route("api/v1/[controller]")]

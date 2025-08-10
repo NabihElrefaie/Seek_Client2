@@ -174,7 +174,7 @@ namespace Seek.API
                                 logger.LogError("Failed to load email settings from encrypted files. Email functionality may not work.");
                             }
                         })
-                        .AddSingleton<IRepo_Email_Templates>()
+                        .AddSingleton<IRepo_Email_Templates, Repo_Email_Templates>()
                         .AddSingleton<SecureKeyManager>(provider =>
                             new SecureKeyManager(
                                 Directory.GetCurrentDirectory(),

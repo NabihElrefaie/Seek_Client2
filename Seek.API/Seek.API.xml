@@ -4,16 +4,16 @@
         <name>Seek.API</name>
     </assembly>
     <members>
-        <member name="M:Seek.API.Controllers.System.VerificationController.GetVerificationStatus">
+        <member name="M:Seek.API.Controllers.verification.VerificationController.GetVerificationStatus">
             Checks if the application is verified
         </member>
-        <member name="M:Seek.API.Controllers.System.VerificationController.SendVerificationCode">
+        <member name="M:Seek.API.Controllers.verification.VerificationController.SendVerificationCode">
             Sends a verification code to the admin email
         </member>
-        <member name="M:Seek.API.Controllers.System.VerificationController.VerifyApplication(Seek.Core.Dtos.Settings.Emails.VerificationRequest_dto)">
+        <member name="M:Seek.API.Controllers.verification.VerificationController.VerifyApplication(Seek.Core.Dtos.Settings.Emails.VerificationRequest_dto)">
             Verifies the application using the provided code
         </member>
-        <member name="M:Seek.API.Controllers.System.VerificationController.ResetVerification">
+        <member name="M:Seek.API.Controllers.verification.VerificationController.ResetVerification">
             Resets the verification status (requires authentication in production)
         </member>
         <member name="T:Seek.API.Security.Config.EmailConfiguration">
@@ -21,9 +21,19 @@
             Manages secure email configuration by reading from external encrypted files
             </summary>
         </member>
+        <member name="M:Seek.API.Security.Config.EmailConfiguration.ConfigureFromSecureFilesWithKey(Seek.Core.Dtos.Settings.Emails.EmailSettings_dto,Microsoft.Extensions.Logging.ILogger,System.String,System.String,System.String)">
+            <summary>
+            Configures email settings from secure files with an explicitly provided key
+            </summary>
+        </member>
         <member name="M:Seek.API.Security.Config.EmailConfiguration.ConfigureFromSecureFiles(Seek.Core.Dtos.Settings.Emails.EmailSettings_dto,Microsoft.Extensions.Logging.ILogger,System.String,System.String)">
             <summary>
             Tries to configure email settings from secure files
+            </summary>
+        </member>
+        <member name="M:Seek.API.Security.Config.EmailConfiguration.SaveSecureConfig(Seek.Core.Dtos.Settings.Emails.EmailSettings_dto,Microsoft.Extensions.Logging.ILogger,System.String,System.String,System.String)">
+            <summary>
+            Saves and encrypts email settings to secure configuration files
             </summary>
         </member>
         <member name="M:Seek.API.Security.Config.EmailConfiguration.DecryptConfig(System.Byte[],System.Byte[],Microsoft.Extensions.Logging.ILogger)">
